@@ -1,0 +1,20 @@
+/*Write a C function to swap two numbers with and without using pointers.*/
+#include<stdio.h>
+#include<string.h>
+int main(){
+    int a,b;
+    printf("ENter the number :");
+    scanf("%d %d",&a,&b);
+    int *v=&b;
+    int *j=&a;
+    printf("After swapping with pointers:\n");
+    printf("v=%d j=%d",*v,*j);
+    int t;
+    t=a;
+    a=b;
+    b=a;
+    printf("\nAfter swapping without pointers:\n");
+    printf("a=%d b=%d",a,b);
+    
+    return 0;
+}

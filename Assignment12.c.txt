@@ -1,0 +1,38 @@
+/*Write a program in C to accept two numbers from the user and compute:
+a)	The smallest common divisor of the two numbers (other than 1, if any)
+b)	The Greatest Common Divisor (GCD) of the two numbers
+*/
+#include<stdio.h>
+
+int main(){
+    int a,b;
+    printf("ENter the two numbers :");
+    scanf("%d %d",&a,&b);
+    if(a<b){
+        for(int i=2;i<=a;i++){
+            if(a%i==0 && b%i==0 ){
+                printf("THe smallest common divisor of two numbers is %d\n",i);
+                break;
+            }
+        }
+        for(int i=a;i>=1;i--){
+            if(a%i==0 && b%i==0){
+                printf("The greatest common divisor of two number is %d\n",i);
+                break;
+            }
+        }
+    }
+    else{
+        for(int i=2;i<=b;i++){
+            if(a%i==0 && b%i==0){
+                printf("THe smallest common divisor of two number is %d\n",i);
+                break;
+            }
+        }
+        for(int i=b;i>=1;i++){
+            printf("THe greatest common divisor of two number is %d\n",i);
+            break;
+        }
+    }
+    return 0;
+}

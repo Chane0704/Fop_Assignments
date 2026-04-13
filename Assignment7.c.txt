@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main(){
+    int n,a,b,c;
+    printf("ENter the numbver of stuents:");
+    scanf("%d",&n);
+    float p[n];
+    int t[n],r[n];
+    char st[n][50];
+    for(int i=0;i<n;i++){
+        printf("Roll number :");
+        scanf("%d",&r[i]);
+        printf("Name:");
+        scanf("%s",st[i]);
+        printf("Marks in three subjects :");
+        scanf("%d %d %d",&a,&b,&c);
+        t[i]=a+b+c;
+        p[i]=t[i]/3.00;
+    }
+    printf("STudents result:\n");
+    for(int i=0;i<n;i++){
+        printf("NAme: %s\n",st[i]);
+        printf("Roll number %d\n",r[i]);
+        printf("Total Marks: %d\n",t[i]);
+        printf("Total percentage: %.2f\n",p[i]);
+    }
+    return 0;
+}

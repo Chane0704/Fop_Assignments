@@ -1,0 +1,14 @@
+/*Write a program in C to accept a number from the user and print the digits of the number in reverse order*/
+#include<stdio.h>
+int main(){
+    int n;
+    printf("enter the digit of number :");
+    scanf("%d",&n);
+    char s[n+1];
+    printf("ENter the number :");
+    scanf("%s",s);
+    for(int i=0;i<n+1;i++){
+        printf("%c ",s[n-i]);
+    }
+    return 0;   
+}

@@ -1,0 +1,40 @@
+// factorial with recursive and none recursive 
+#include<stdio.h>
+int fact(int n);
+int fact(int n){
+    for (int i = 1; i<=n; i++)
+    {
+        if(n==0 || n==1){
+            return 1;
+        }else{
+            return n*fact(n-1);
+        }
+    }
+    
+}
+int fact1(int n);
+int fact1(int n){
+    int a=1;
+    for (int i = 1; i <=n; i++)
+    {
+        if(n==1 || n==0){
+            return a;
+        }else{
+            a=a*i;
+        }
+    
+    }
+    return a;
+    
+}
+int main(){
+    int n;
+    printf("Enter the number :");
+    scanf("%d",&n);
+    int v1,v2;
+    v1=fact(n);
+    v2=fact1(n);
+    printf("Factorial of number using reculsive function is %d\n",v1);
+    printf("FActorial of number without using reculsive is %d",v2);
+    return 0;
+}
